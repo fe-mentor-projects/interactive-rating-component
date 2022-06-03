@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <title>Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/52e2bf90a9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="rating-form" id="main-display">
+      <span class="star-icon"><i class="fa-solid fa-star"></i></span>
+      <h1>How did we do?</h1>
 
-  <!-- Rating state start -->
-  <section class="reviewCard">
+      <p>
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
 
-  <div class="starWrap"><img src="images/icon-star.svg" class="cardStar" /></div>
-
-  <h1>How did we do?</h1>
-
-  <p class="parOne">Please let us know how we did with your support <br> request. All feedback is appreciated 
-  to help us <br> improve our offering!</p>
-
-  <ul class="ratings">
-    <li class="rating">1</li>
-    <li class="rating">2</li>
-    <li class="rating">3</li>
-    <li class="rating">4</li>
-    <li class="rating">5</li>
-  </ul>
-
-  <button class="submitButton">Submit</button>
-
-  </section>
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start --> 
-
-  
-  <h4 class="dontDisplay">You selected x out of 5</h4>
-
-  <h1 class="dontDisplay"> Thank you! </h1>
-
-  <p class="dontDisplay">We appreciate you taking the time to give a rating. If you ever need more support, 
-  don't hesitate to get in touch!</p>
-
-  
-
-  <!-- Thank you state end -->
-
-  <footer> 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Sebastian Von Black</a>.
+      <form id="rating-scale">
+        <div class="ratings" id="ratings">
+          <input
+            type="button"
+            value="1"
+            class="button"
+            onclick="setRating(this.value, event)"
+          />
+          <input
+            type="button"
+            value="2"
+            class="button"
+            onclick="setRating(this.value, event)"
+          />
+          <input
+            type="button"
+            value="3"
+            class="button"
+            onclick="setRating(this.value, event)"
+          />
+          <input
+            type="button"
+            value="4"
+            class="button"
+            onclick="setRating(this.value, event)"
+          />
+          <input
+            type="button"
+            value="5"
+            class="button"
+            onclick="setRating(this.value, event)"
+          />
+        </div>
+        <input
+          type="submit"
+          value="Submit"
+          class="submit-button"
+          id="submit-button"
+        />
+      </form>
     </div>
-  </footer>
 
-  <script>
-    document.querySelector(".ratings").addEventListener("click", function (e) {
-  if (e.target.classList.contains("rating") === false) {
-    return;
-  }
+    <div class="coding-name-link">
+      Coded by Sebastian Von Black and
+      <a
+        href="https://github.com/fe-mentor-projects/interactive-rating-component"
+        target="_blank"
+        >open-sourced on GitHub</a
+      >
+    </div>
 
-  [...this.querySelectorAll(".rating")].forEach((rating) =>
-    rating.classList.remove("selected")
-  );
-
-  e.target.classList.add("selected");
-});
-
-
-  document.querySelector(".submitButton").addEventListener("click", function (i) {
-    document.querySelectorAll(".dontDisplay").forEach(el =>
-    el.classList.remove("dontDisplay"))
-
-    
-  });
-  </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
