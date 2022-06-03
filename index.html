@@ -41,17 +41,17 @@
 
   <!-- Rating state end -->
 
-  <!-- Thank you state start -->
+  <!-- Thank you state start --> 
 
-  <!-- Commented out for now
-  You selected x out of 5
+  
+  <h4 class="dontDisplay">You selected x out of 5</h4>
 
-  Thank you!
+  <h1 class="dontDisplay"> Thank you! </h1>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don't hesitate to get in touch!
+  <p class="dontDisplay">We appreciate you taking the time to give a rating. If you ever need more support, 
+  don't hesitate to get in touch!</p>
 
-  -->
+  
 
   <!-- Thank you state end -->
 
@@ -75,6 +75,13 @@
   e.target.classList.add("selected");
 });
 
+
+  document.querySelector(".submitButton").addEventListener("click", function (i) {
+    document.querySelectorAll(".dontDisplay").forEach(el =>
+    el.classList.remove("dontDisplay"))
+
+    
+  });
   </script>
 </body>
 </html>

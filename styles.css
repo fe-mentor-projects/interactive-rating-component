@@ -108,17 +108,19 @@ footer {
 .submitButton:hover {
     background-color: white;
     color:hsl(25, 97%, 53%);
-    transition: background-color .5s ease-in-out;
+    
 }
 
 .selected {
-    background-color: orange;
-  }
-  .ratings:hover .selected:not(:hover) {
-    background-color: #aaa;
-  }
-  
+  background-color: orange;
+}
+.ratings .selected:not(:hover) {
+  background-color: #aaa;
+}
 
+.dontDisplay {
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     .reviewCard {
         width: 80%;
