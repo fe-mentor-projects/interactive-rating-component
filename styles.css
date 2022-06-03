@@ -63,7 +63,6 @@ footer {
     display: grid;
     place-items: center;
     background-color: hsl(211, 19%, 26%);
-    
     border-radius: 50px;
     width: 10%;
     padding: 5%;
@@ -76,10 +75,11 @@ footer {
 
 .reviewCard ul li:hover {
     background-color: hsl(25, 97%, 53%);
-    transition: background-color .5s ease-in-out;
+    
 
 
 }
+
 
 .reviewCard button {
     align-self: center;
@@ -109,4 +109,34 @@ footer {
     background-color: white;
     color:hsl(25, 97%, 53%);
     transition: background-color .5s ease-in-out;
+}
+
+.selected {
+    background-color: orange;
+  }
+  .ratings:hover .selected:not(:hover) {
+    background-color: #aaa;
+  }
+  
+
+@media only screen and (max-width: 600px) {
+    .reviewCard {
+        width: 80%;
+        padding: 5%;
+    }
+
+    .starWrap {
+        
+        margin-left: 2%;
+        width: 10%;
+        height: 150px;
+        
+        border-radius: 70px;
+    }
+
+    .submitButton {
+        height: 80px;
+        font-size: 18px;
+        margin-bottom: 5%;
+    }
 }
